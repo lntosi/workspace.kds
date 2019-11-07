@@ -1,9 +1,9 @@
-01:41:04 **** Incremental Build of configuration Debug for project labsem ****
+16:10:15 **** Incremental Build of configuration Debug for project labsem ****
 make all 
-Building file: ../Sources/rtos_main_task.c
+Building file: ../Sources/os_tasks.c
 Invoking: Cross ARM C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D"CPU_MKL25Z128VLK4" -D"FSL_RTOS_FREE_RTOS" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/hal/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/hal/src/sim/MKL25Z4" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/system/src/clock/MKL25Z4" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/system/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/osa/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/CMSIS/Include" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/devices" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/devices/MKL25Z4/include" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/utilities/src" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/utilities/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/lntos/workspace.kds/labsem/Generated_Code/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/lntos/workspace.kds/labsem/Sources" -I"C:/Users/lntos/workspace.kds/labsem/Generated_Code" -I"C:/Users/lntos/workspace.kds/labsem/SDK/rtos/FreeRTOS/include" -I"C:/Users/lntos/workspace.kds/labsem/SDK/rtos/FreeRTOS/port/gcc" -I"C:/Users/lntos/workspace.kds/labsem/Generated_Code/SDK/rtos/FreeRTOS/config" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/drivers/inc" -std=c99 -MMD -MP -MF"Sources/rtos_main_task.d" -MT"Sources/rtos_main_task.o" -c -o "Sources/rtos_main_task.o" "../Sources/rtos_main_task.c"
-Finished building: ../Sources/rtos_main_task.c
+arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wall  -g3 -D"CPU_MKL25Z128VLK4" -D"FSL_RTOS_FREE_RTOS" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/hal/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/hal/src/sim/MKL25Z4" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/system/src/clock/MKL25Z4" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/system/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/osa/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/CMSIS/Include" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/devices" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/devices/MKL25Z4/include" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/utilities/src" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/utilities/inc" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/lntos/workspace.kds/labsem/Generated_Code/SDK/platform/devices/MKL25Z4/startup" -I"C:/Users/lntos/workspace.kds/labsem/Sources" -I"C:/Users/lntos/workspace.kds/labsem/Generated_Code" -I"C:/Users/lntos/workspace.kds/labsem/SDK/rtos/FreeRTOS/include" -I"C:/Users/lntos/workspace.kds/labsem/SDK/rtos/FreeRTOS/port/gcc" -I"C:/Users/lntos/workspace.kds/labsem/Generated_Code/SDK/rtos/FreeRTOS/config" -I"C:/Users/lntos/workspace.kds/labsem/SDK/platform/drivers/inc" -std=c99 -MMD -MP -MF"Sources/os_tasks.d" -MT"Sources/os_tasks.o" -c -o "Sources/os_tasks.o" "../Sources/os_tasks.c"
+Finished building: ../Sources/os_tasks.c
  
 Building target: labsem.elf
 Invoking: Cross ARM C++ Linker
@@ -13,14 +13,14 @@ Finished building target: labsem.elf
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "labsem.elf"
    text	   data	    bss	    dec	    hex	filename
-  19276	    124	  10308	  29708	   740c	labsem.elf
+  18696	    124	  10308	  29128	   71c8	labsem.elf
 Finished building: labsem.siz
  
-01:41:12 **** Incremental Build of configuration Debug for project labsem ****
+16:10:24 **** Incremental Build of configuration Debug for project labsem ****
 make all 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "labsem.elf"
    text	   data	    bss	    dec	    hex	filename
-  19276	    124	  10308	  29708	   740c	labsem.elf
+  18696	    124	  10308	  29128	   71c8	labsem.elf
 Finished building: labsem.siz
  

@@ -1,4 +1,4 @@
-12:43:07 **** Incremental Build of configuration Debug for project labqueue ****
+15:47:18 **** Incremental Build of configuration Debug for project labqueue ****
 make all 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "labqueue.elf"
@@ -7,5 +7,5 @@ arm-none-eabi-size --format=berkeley "labqueue.elf"
 Finished building: labqueue.siz
  
 
-12:43:09 Build Finished (took 1s.792ms)
+15:47:19 Build Finished (took 1s.562ms)
 

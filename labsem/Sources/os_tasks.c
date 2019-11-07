@@ -70,28 +70,44 @@ void Task2_task(os_task_param_t task_init_data)
 
 		switch (estadoVerde){
 		case 0:
-			ledrgb_clearGreenLed( );
+			/*ledrgb_clearGreenLed( );
 			if (OSA_SemaPost(meuSemaforo) != kStatus_OSA_Success){
 				estadoVerde = 2;
 			}
 			estadoVerde = 1;
 			OSA_TimeDelay(1000);
+			break;*/
+			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
+				estadoVerde=2;
+			}
+			ledrgb_clearGreenLed( );
+			estadoVerde = 1;
+			OSA_TimeDelay(1000);
 			break;
 		case 1:
-			if (OSA_SemaWait(meuSemaforo,2000) != kStatus_OSA_Success){
+			/*if (OSA_SemaWait(meuSemaforo,2000) != kStatus_OSA_Success){
 				estadoVerde = 3;
+			}
+			ledrgb_setGreenLed( );
+			estadoVerde = 0;
+			OSA_TimeDelay(1000);
+			break;*/
+			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
+				estadoVerde=3;
 			}
 			ledrgb_setGreenLed( );
 			estadoVerde = 0;
 			OSA_TimeDelay(1000);
 			break;
 		case 2:
+			ledrgb_setRedLed( );
 			break;
 		case 3:
+			ledrgb_setRedLed( );
 			break;
 		}
 
-//pegar o sem, alterar o led e liberar o sem
+		//pegar o sem, alterar o led e liberar o sem
 
 		/*
 		ledrgb_setGreenLed( );
@@ -119,7 +135,7 @@ void Task1_task(os_task_param_t task_init_data)
 {
 	/* Write your local variable definition here */
 
-	uint8_t estadoAzul = 1;
+	uint8_t estadoAzul = 0;
 
 #ifdef PEX_USE_RTOS
 	while (1) {
@@ -129,24 +145,40 @@ void Task1_task(os_task_param_t task_init_data)
 
 		switch (estadoAzul){
 		case 0:
-			if (OSA_SemaWait(meuSemaforo,2000) != kStatus_OSA_Success){
-				estadoAzul=3;
+			/*if (OSA_SemaWait(meuSemaforo,2000) != kStatus_OSA_Success){
+				estadoAzul=2;
 			}
 			ledrgb_setBlueLed( );
 			estadoAzul = 1;
 			OSA_TimeDelay(1000);
+			break;*/
+			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
+				estadoAzul=2;
+			}
+			ledrgb_clearBlueLed( );
+			estadoAzul = 1;
+			OSA_TimeDelay(1000);
 			break;
 		case 1:
-			ledrgb_clearBlueLed( );
+			/*ledrgb_clearBlueLed( );
 			if (OSA_SemaPost(meuSemaforo) != kStatus_OSA_Success){
 				estadoAzul=3;
 			}
 			estadoAzul = 0;
 			OSA_TimeDelay(1000);
+			break;*/
+			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
+				estadoAzul=3;
+			}
+			ledrgb_setBlueLed( );
+			estadoAzul = 0;
+			OSA_TimeDelay(1000);
 			break;
 		case 2:
+			ledrgb_setRedLed( );
 			break;
 		case 3:
+			ledrgb_setRedLed( );
 			break;
 		}
 
