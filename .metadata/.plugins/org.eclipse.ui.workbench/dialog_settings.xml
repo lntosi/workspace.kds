@@ -20,6 +20,13 @@
 		<item value="158" key="DIALOG_Y_ORIGIN"/>
 		<item value="535" key="DIALOG_X_ORIGIN"/>
 	</section>
+	<section name="InstallationDialogSettings">
+		<item value="706" key="DIALOG_WIDTH"/>
+		<item value="-302" key="DIALOG_Y_ORIGIN"/>
+		<item value="-12" key="DIALOG_X_ORIGIN"/>
+		<item value="744" key="DIALOG_HEIGHT"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
@@ -27,13 +34,6 @@
 			<item value="C:\Users\lntos\OneDrive\ITA\CE-235 Sistemas Embarcados de Tempo Real\Labs\CE-235\lab4.zip"/>
 			<item value="C:\Users\lntos\OneDrive\ITA\CE-235 Sistemas Embarcados de Tempo Real\Labs\CE-235\lab3.zip"/>
 		</list>
-	</section>
-	<section name="InstallationDialogSettings">
-		<item value="706" key="DIALOG_WIDTH"/>
-		<item value="-302" key="DIALOG_Y_ORIGIN"/>
-		<item value="744" key="DIALOG_HEIGHT"/>
-		<item value="-12" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="uncategorizedFilter"/>

@@ -43,7 +43,6 @@ extern "C" {
 
 extern SemaphoreHandle_t meuSemaforo;
 
-
 /*
 ** ===================================================================
 **     Callback    : Task2_task
@@ -62,41 +61,30 @@ void Task2_task(os_task_param_t task_init_data)
 #ifdef PEX_USE_RTOS
 	while (1) {
 #endif
-		/* Write your code here ... */
 
-
-		//OSA_TimeDelay(10);                 /* Example code (for task release) */
-
+		/*
+		The pdMS_TO_TICKS() API converts your millisecond requirement to FreeRTOS Ticks.
+		The FreeRTOS Kernel uses Ticks to schedule and keep track of the various tasks in a microcontroller up to 1KHZ.
+		Source: https://www.hackster.io/Niket/tasks-delaytasks-freertos-tutorial-6-45f6b2
+		*/
 
 		switch (estadoVerde){
 		case 0:
-			/*ledrgb_clearGreenLed( );
-			if (OSA_SemaPost(meuSemaforo) != kStatus_OSA_Success){
-				estadoVerde = 2;
-			}
-			estadoVerde = 1;
-			OSA_TimeDelay(1000);
-			break;*/
 			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
 				estadoVerde=2;
 			}
 			ledrgb_clearGreenLed( );
 			estadoVerde = 1;
+			xSemaphoreGive(meuSemaforo);
 			OSA_TimeDelay(1000);
 			break;
 		case 1:
-			/*if (OSA_SemaWait(meuSemaforo,2000) != kStatus_OSA_Success){
-				estadoVerde = 3;
-			}
-			ledrgb_setGreenLed( );
-			estadoVerde = 0;
-			OSA_TimeDelay(1000);
-			break;*/
 			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
 				estadoVerde=3;
 			}
 			ledrgb_setGreenLed( );
 			estadoVerde = 0;
+			xSemaphoreGive(meuSemaforo);
 			OSA_TimeDelay(1000);
 			break;
 		case 2:
@@ -107,71 +95,53 @@ void Task2_task(os_task_param_t task_init_data)
 			break;
 		}
 
-		//pegar o sem, alterar o led e liberar o sem
-
-		/*
-		ledrgb_setGreenLed( );
-		//OSA_TimeDelay(1000);
-		ledrgb_clearGreenLed( );
-		//OSA_TimeDelay(1000);
-		 */
-
-
 #ifdef PEX_USE_RTOS   
-  }
+	}
 #endif    
 }
 
 /*
-** ===================================================================
-**     Callback    : Task1_task
-**     Description : Task function entry.
-**     Parameters  :
-**       task_init_data - OS task parameter
-**     Returns : Nothing
-** ===================================================================
-*/
+ ** ===================================================================
+ **     Callback    : Task1_task
+ **     Description : Task function entry.
+ **     Parameters  :
+ **       task_init_data - OS task parameter
+ **     Returns : Nothing
+ ** ===================================================================
+ */
 void Task1_task(os_task_param_t task_init_data)
 {
 	/* Write your local variable definition here */
 
-	uint8_t estadoAzul = 0;
+	uint8_t estadoAzul = 1;
 
 #ifdef PEX_USE_RTOS
 	while (1) {
 #endif
-		/* Write your code here ... */
 
+		/*
+		The pdMS_TO_TICKS() API converts your millisecond requirement to FreeRTOS Ticks.
+		The FreeRTOS Kernel uses Ticks to schedule and keep track of the various tasks in a microcontroller up to 1KHZ.
+		Source: https://www.hackster.io/Niket/tasks-delaytasks-freertos-tutorial-6-45f6b2
+		*/
 
 		switch (estadoAzul){
 		case 0:
-			/*if (OSA_SemaWait(meuSemaforo,2000) != kStatus_OSA_Success){
-				estadoAzul=2;
-			}
-			ledrgb_setBlueLed( );
-			estadoAzul = 1;
-			OSA_TimeDelay(1000);
-			break;*/
 			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
 				estadoAzul=2;
 			}
 			ledrgb_clearBlueLed( );
 			estadoAzul = 1;
+			xSemaphoreGive(meuSemaforo);
 			OSA_TimeDelay(1000);
 			break;
 		case 1:
-			/*ledrgb_clearBlueLed( );
-			if (OSA_SemaPost(meuSemaforo) != kStatus_OSA_Success){
-				estadoAzul=3;
-			}
-			estadoAzul = 0;
-			OSA_TimeDelay(1000);
-			break;*/
 			if (xSemaphoreTake (meuSemaforo, 0) != kStatus_OSA_Success){
 				estadoAzul=3;
 			}
 			ledrgb_setBlueLed( );
 			estadoAzul = 0;
+			xSemaphoreGive(meuSemaforo);
 			OSA_TimeDelay(1000);
 			break;
 		case 2:
@@ -182,17 +152,8 @@ void Task1_task(os_task_param_t task_init_data)
 			break;
 		}
 
-
-		/*
-		OSA_TimeDelay(1000);
-		ledrgb_setBlueLed( );
-		//OSA_TimeDelay(1000);
-		ledrgb_clearBlueLed( );
-		 */
-
-
-		#ifdef PEX_USE_RTOS
-  }
+#ifdef PEX_USE_RTOS
+	}
 #endif    
 }
 

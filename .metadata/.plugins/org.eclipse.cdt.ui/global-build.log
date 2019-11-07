@@ -1,4 +1,4 @@
-16:10:15 **** Incremental Build of configuration Debug for project labsem ****
+17:57:12 **** Incremental Build of configuration Debug for project labsem ****
 make all 
 Building file: ../Sources/os_tasks.c
 Invoking: Cross ARM C Compiler
@@ -13,14 +13,14 @@ Finished building target: labsem.elf
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "labsem.elf"
    text	   data	    bss	    dec	    hex	filename
-  18696	    124	  10308	  29128	   71c8	labsem.elf
+  18760	    124	  10308	  29192	   7208	labsem.elf
 Finished building: labsem.siz
  
-16:10:24 **** Incremental Build of configuration Debug for project labsem ****
+17:57:23 **** Incremental Build of configuration Debug for project labsem ****
 make all 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "labsem.elf"
    text	   data	    bss	    dec	    hex	filename
-  18696	    124	  10308	  29128	   71c8	labsem.elf
+  18760	    124	  10308	  29192	   7208	labsem.elf
 Finished building: labsem.siz
  
