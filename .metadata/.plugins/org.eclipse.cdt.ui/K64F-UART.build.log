@@ -1,0 +1,11 @@
+16:29:24 **** Incremental Build of configuration Debug for project K64F-UART ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "K64F-UART.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17092	    120	   1712	  18924	   49ec	K64F-UART.elf
+Finished building: K64F-UART.siz
+ 
+
+16:29:24 Build Finished (took 572ms)
+

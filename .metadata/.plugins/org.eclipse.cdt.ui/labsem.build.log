@@ -1,0 +1,11 @@
+01:41:12 **** Incremental Build of configuration Debug for project labsem ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "labsem.elf"
+   text	   data	    bss	    dec	    hex	filename
+  19276	    124	  10308	  29708	   740c	labsem.elf
+Finished building: labsem.siz
+ 
+
+01:41:13 Build Finished (took 1s.62ms)
+

@@ -1,0 +1,11 @@
+19:47:39 **** Build of configuration Debug for project labtasks ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "labtasks.elf"
+   text	   data	    bss	    dec	    hex	filename
+  18500	    124	  10300	  28924	   70fc	labtasks.elf
+Finished building: labtasks.siz
+ 
+
+19:47:40 Build Finished (took 1s.315ms)
+

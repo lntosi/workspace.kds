@@ -1,0 +1,11 @@
+22:49:28 **** Incremental Build of configuration Debug for project acceler ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "acceler.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17692	    124	  10292	  28108	   6dcc	acceler.elf
+Finished building: acceler.siz
+ 
+
+22:49:29 Build Finished (took 691ms)
+

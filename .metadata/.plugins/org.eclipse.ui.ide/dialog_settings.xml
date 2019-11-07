@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="274" key="DIALOG_Y_ORIGIN"/>
+		<item value="619" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="N:\Sensores\acelerometro"/>
+			<item value="C:\Users\lntos\Desktop\CE_235_2019_KSDK_1.3-master\lab04_message_queue"/>
+			<item value="C:\Users\lntos\Documents\IPBL2019\ipbl2019\5_Prova_Conceito\Sistema_Embarcado\Sensores\acelerometro"/>
+			<item value="C:\Users\lntos\Desktop\acelerometro"/>
+			<item value="C:\Users\lntos\Desktop\Freedom_Accel"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="160" key="DIALOG_Y_ORIGIN"/>
+		<item value="378" key="DIALOG_HEIGHT"/>
+		<item value="2438" key="DIALOG_X_ORIGIN"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+	</section>
+</section>
