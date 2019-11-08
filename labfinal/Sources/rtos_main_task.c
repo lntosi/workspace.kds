@@ -31,6 +31,7 @@
 #include "Events.h"
 #include "rtos_main_task.h"
 #include "os_tasks.h"
+#include "ledrgb_hal.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -62,6 +63,8 @@ void main_task(os_task_param_t task_init_data)
   PEX_components_init(); 
 #endif 
   /* End of Processor Expert components initialization.  */
+
+  ledrgb_init( );
 
 #ifdef PEX_USE_RTOS
   while (1) {

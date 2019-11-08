@@ -7,7 +7,7 @@
 **     Version     : Component 1.3.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.3.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-04, 19:04, # CodeGen: 53
+**     Date/Time   : 2019-11-07, 23:06, # CodeGen: 68
 **     Contents    :
 **         Init - osa_status_t Task4_Init(void);
 **
@@ -64,7 +64,7 @@
 /* Task4 task name */  
 #define TASK4_TASK_NAME                "task4"
 /* Task4 task stack size */  
-#define TASK4_TASK_STACK_SIZE          1024U
+#define TASK4_TASK_STACK_SIZE          512U
 /* Task4 task priority value */  
 #define TASK4_TASK_PRIORITY            4U
 /*

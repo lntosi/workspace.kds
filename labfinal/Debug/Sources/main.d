@@ -43,6 +43,8 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_uart_hal.h \
  C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_lpsci_hal.h \
  C:/Users/lntos/workspace.kds/labfinal/SDK/platform/utilities/inc/fsl_debug_console.h \
+ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_gpio_hal.h \
+ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/drivers/inc/fsl_gpio_driver.h \
  ../Sources/Events.h \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/clockMan1.h \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/pin_init.h \
@@ -54,8 +56,9 @@ Sources/main.o: ../Sources/main.c \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Task3.h \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Task4.h \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Task5.h \
- C:/Users/lntos/workspace.kds/labfinal/Generated_Code/DbgCs1.h \
+ C:/Users/lntos/workspace.kds/labfinal/Generated_Code/gpio1.h \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/clockMan1.h \
+ C:/Users/lntos/workspace.kds/labfinal/Generated_Code/DbgCs1.h \
  ../Sources/rtos_main_task.h ../Sources/os_tasks.h
 
 C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Cpu.h:
@@ -146,6 +149,10 @@ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_lpsci_hal.h:
 
 C:/Users/lntos/workspace.kds/labfinal/SDK/platform/utilities/inc/fsl_debug_console.h:
 
+C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_gpio_hal.h:
+
+C:/Users/lntos/workspace.kds/labfinal/SDK/platform/drivers/inc/fsl_gpio_driver.h:
+
 ../Sources/Events.h:
 
 C:/Users/lntos/workspace.kds/labfinal/Generated_Code/clockMan1.h:
@@ -168,9 +175,11 @@ C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Task4.h:
 
 C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Task5.h:
 
-C:/Users/lntos/workspace.kds/labfinal/Generated_Code/DbgCs1.h:
+C:/Users/lntos/workspace.kds/labfinal/Generated_Code/gpio1.h:
 
 C:/Users/lntos/workspace.kds/labfinal/Generated_Code/clockMan1.h:
+
+C:/Users/lntos/workspace.kds/labfinal/Generated_Code/DbgCs1.h:
 
 ../Sources/rtos_main_task.h:
 

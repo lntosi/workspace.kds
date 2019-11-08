@@ -24,7 +24,9 @@ RM := rm -rf
 -include SDK/platform/hal/src/osc/subdir.mk
 -include SDK/platform/hal/src/mcg/subdir.mk
 -include SDK/platform/hal/src/lpsci/subdir.mk
+-include SDK/platform/hal/src/gpio/subdir.mk
 -include SDK/platform/drivers/src/rtc/subdir.mk
+-include SDK/platform/drivers/src/gpio/subdir.mk
 -include SDK/platform/devices/MKL25Z4/startup/gcc/subdir.mk
 -include SDK/platform/devices/MKL25Z4/startup/subdir.mk
 -include SDK/platform/devices/subdir.mk
