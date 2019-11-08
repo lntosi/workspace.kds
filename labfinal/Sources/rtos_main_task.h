@@ -5,7 +5,7 @@
 **     Component   : Events
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-04, 18:34, # CodeGen: 43
+**     Date/Time   : 2019-11-08, 15:45, # CodeGen: 74
 **     Abstract    :
 **         This is user's event module.
 **         Put your event handler code here.
@@ -36,13 +36,12 @@
 #include "osa1.h"
 #include "free_rtos.h"
 #include "MainTask.h"
-#include "DbgCs1.h"
 #include "Task1.h"
 #include "Task2.h"
 #include "Task3.h"
 #include "Task4.h"
 #include "Task5.h"
-#include "gpio1.h"
+#include "DbgCs1.h"
 
 #ifdef __cplusplus
 extern "C" {

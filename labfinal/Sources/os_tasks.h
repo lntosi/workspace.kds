@@ -5,12 +5,13 @@
 **     Component   : Events
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-04, 18:34, # CodeGen: 43
+**     Date/Time   : 2019-11-08, 15:45, # CodeGen: 74
 **     Abstract    :
 **         This is user's event module.
 **         Put your event handler code here.
 **     Settings    :
 **     Contents    :
+**         Task2_task - void Task2_task(os_task_param_t task_init_data);
 **         Task1_task - void Task1_task(os_task_param_t task_init_data);
 **
 ** ###################################################################*/
@@ -36,17 +37,27 @@
 #include "osa1.h"
 #include "free_rtos.h"
 #include "MainTask.h"
-#include "DbgCs1.h"
 #include "Task1.h"
 #include "Task2.h"
 #include "Task3.h"
 #include "Task4.h"
 #include "Task5.h"
-#include "gpio1.h"
+#include "DbgCs1.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif 
+
+/*
+** ===================================================================
+**     Callback    : Task2_task
+**     Description : Task function entry.
+**     Parameters  :
+**       task_init_data - OS task parameter
+**     Returns : Nothing
+** ===================================================================
+*/
+void Task2_task(os_task_param_t task_init_data);
 
 /*
 ** ===================================================================
@@ -62,25 +73,14 @@ void Task1_task(os_task_param_t task_init_data);
 
 /*
 ** ===================================================================
-**     Callback    : Task2_task
+**     Callback    : Task5_task
 **     Description : Task function entry.
 **     Parameters  :
 **       task_init_data - OS task parameter
 **     Returns : Nothing
 ** ===================================================================
 */
-void Task2_task(os_task_param_t task_init_data);
-
-/*
-** ===================================================================
-**     Callback    : Task3_task
-**     Description : Task function entry.
-**     Parameters  :
-**       task_init_data - OS task parameter
-**     Returns : Nothing
-** ===================================================================
-*/
-void Task3_task(os_task_param_t task_init_data);
+void Task5_task(os_task_param_t task_init_data);
 
 /*
 ** ===================================================================
@@ -95,14 +95,14 @@ void Task4_task(os_task_param_t task_init_data);
 
 /*
 ** ===================================================================
-**     Callback    : Task5_task
+**     Callback    : Task3_task
 **     Description : Task function entry.
 **     Parameters  :
 **       task_init_data - OS task parameter
 **     Returns : Nothing
 ** ===================================================================
 */
-void Task5_task(os_task_param_t task_init_data);
+void Task3_task(os_task_param_t task_init_data);
 
 /* END os_tasks */
 

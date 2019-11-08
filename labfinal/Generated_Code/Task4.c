@@ -7,7 +7,7 @@
 **     Version     : Component 1.3.0, Driver 01.00, CPU db: 3.00.000
 **     Repository  : KSDK 1.3.0
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-04, 18:52, # CodeGen: 49
+**     Date/Time   : 2019-11-08, 15:56, # CodeGen: 75
 **     Contents    :
 **         Init - osa_status_t Task4_Init(void);
 **

@@ -47,7 +47,6 @@
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\system\src\clock\MKL25Z4\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\utilities\src\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\utilities\inc\</Path>
-      <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\inc\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\CMSIS\Include\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\MKL25Z4\include\</Path>
@@ -60,9 +59,7 @@
       <Path>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\MKL25Z4\startup\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\</Path>
-      <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\src\gpio\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\src\rtc\</Path>
-      <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\gpio\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\lpsci\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\mcg\</Path>
       <Path>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\osc\</Path>
@@ -94,16 +91,12 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\Task5.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\clockMan1.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\free_rtos.c</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\gpio1.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\hardware_init.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\osa1.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\pin_init.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\MKL25Z4\startup\system_MKL25Z4.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\startup.c</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\src\gpio\fsl_gpio_common.c</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\src\gpio\fsl_gpio_driver.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\src\rtc\fsl_rtc_common.c</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\gpio\fsl_gpio_hal.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\lpsci\fsl_lpsci_hal.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\mcg\fsl_mcg_hal.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\src\mcg\fsl_mcg_hal_modes.c</PathName>
@@ -133,7 +126,6 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\src\tasks.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\src\timers.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\Events.c</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\ledrgb_hal.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\main.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\os_tasks.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\rtos_main_task.c</PathName>
@@ -154,7 +146,6 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\board.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\clockMan1.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\free_rtos.h</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\gpio1.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\osa1.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Generated_Code\pin_init.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\CMSIS\Include\arm_common_tables.h</PathName>
@@ -170,8 +161,6 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\MKL25Z4\include\fsl_bitaccess.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\fsl_device_registers.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\devices\startup.h</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\drivers\inc\fsl_gpio_driver.h</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\inc\fsl_gpio_hal.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\inc\fsl_lpsci_hal.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\inc\fsl_mcg_hal.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\hal\inc\fsl_mcg_hal_modes.h</PathName>
@@ -205,7 +194,6 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\port\gcc\portTicks.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\port\gcc\portmacro.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\Events.h</PathName>
-      <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\ledrgb_hal.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\os_tasks.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\rtos_main_task.h</PathName>
     </GeneratedHs>

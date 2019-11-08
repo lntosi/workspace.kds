@@ -1,37 +1,37 @@
 /* ###################################################################
- **     Filename    : os_tasks.c
- **     Project     : labfinal
- **     Processor   : MKL25Z128VLK4
- **     Component   : Events
- **     Version     : Driver 01.00
- **     Compiler    : GNU C Compiler
- **     Date/Time   : 2019-11-04, 18:34, # CodeGen: 43
- **     Abstract    :
- **         This is user's event module.
- **         Put your event handler code here.
- **     Settings    :
- **     Contents    :
- **         Task1_task - void Task1_task(os_task_param_t task_init_data);
- **
- ** ###################################################################*/
+**     Filename    : os_tasks.c
+**     Project     : labfinal
+**     Processor   : MKL25Z128VLK4
+**     Component   : Events
+**     Version     : Driver 01.00
+**     Compiler    : GNU C Compiler
+**     Date/Time   : 2019-11-08, 15:45, # CodeGen: 74
+**     Abstract    :
+**         This is user's event module.
+**         Put your event handler code here.
+**     Settings    :
+**     Contents    :
+**         Task2_task - void Task2_task(os_task_param_t task_init_data);
+**         Task1_task - void Task1_task(os_task_param_t task_init_data);
+**
+** ###################################################################*/
 /*!
- ** @file os_tasks.c
- ** @version 01.00
- ** @brief
- **         This is user's event module.
- **         Put your event handler code here.
- */
+** @file os_tasks.c
+** @version 01.00
+** @brief
+**         This is user's event module.
+**         Put your event handler code here.
+*/         
 /*!
- **  @addtogroup os_tasks_module os_tasks module documentation
- **  @{
- */
+**  @addtogroup os_tasks_module os_tasks module documentation
+**  @{
+*/         
 /* MODULE os_tasks */
 
 #include "Cpu.h"
 #include "Events.h"
 #include "rtos_main_task.h"
 #include "os_tasks.h"
-#include "ledrgb_hal.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,6 +39,8 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+
+extern SemaphoreHandle_t meuSemaforo;
 
 /*
  ** ===================================================================

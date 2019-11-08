@@ -8,7 +8,7 @@
 **     Repository  : KSDK 1.3.0
 **     Datasheet   : KL25P80M48SF0RM, Rev.3, Sep 2012
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-07, 22:44, # CodeGen: 58
+**     Date/Time   : 2019-11-08, 16:05, # CodeGen: 78
 **     Abstract    :
 **
 **     Settings    :
@@ -109,12 +109,6 @@ void Common_Init(void)
 void Components_Init(void)
 {
 
-  /*! DbgCs1 Auto initialization start */
-  /* Enable clock source for LPSCI - bitfield UART0 within SIM_SOPT2 */
-  CLOCK_SYS_SetLpsciSrc(BOARD_DEBUG_UART_INSTANCE,kClockLpsciSrcPllFllSel);
-  /* Debug console initialization */
-  DbgConsole_Init(BOARD_DEBUG_UART_INSTANCE, DEBUG_UART_BAUD, DEBUG_UART_TYPE);
-  /*! DbgCs1 Auto initialization end */
   /*! Task1 Auto initialization start */ 
   (void)Task1_Init();
   /*! Task1 Auto initialization end */                       
@@ -130,10 +124,12 @@ void Components_Init(void)
   /*! Task5 Auto initialization start */ 
   (void)Task5_Init();
   /*! Task5 Auto initialization end */                       
-  /*! gpio1 Auto initialization start */
-  GPIO_DRV_Init(gpio1_InpConfig0,gpio1_OutConfig0);
-  /*! gpio1 Auto initialization end */
-  
+  /*! DbgCs1 Auto initialization start */
+  /* Enable clock source for LPSCI - bitfield UART0 within SIM_SOPT2 */
+  CLOCK_SYS_SetLpsciSrc(BOARD_DEBUG_UART_INSTANCE,kClockLpsciSrcPllFllSel);
+  /* Debug console initialization */
+  DbgConsole_Init(BOARD_DEBUG_UART_INSTANCE, DEBUG_UART_BAUD, DEBUG_UART_TYPE);
+  /*! DbgCs1 Auto initialization end */
 }
 #endif /* CPU_COMPONENTS_INIT */
 
