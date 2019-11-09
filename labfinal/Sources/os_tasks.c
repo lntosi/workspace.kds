@@ -1,31 +1,31 @@
 /* ###################################################################
-**     Filename    : os_tasks.c
-**     Project     : labfinal
-**     Processor   : MKL25Z128VLK4
-**     Component   : Events
-**     Version     : Driver 01.00
-**     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-11-08, 15:45, # CodeGen: 74
-**     Abstract    :
-**         This is user's event module.
-**         Put your event handler code here.
-**     Settings    :
-**     Contents    :
-**         Task2_task - void Task2_task(os_task_param_t task_init_data);
-**         Task1_task - void Task1_task(os_task_param_t task_init_data);
-**
-** ###################################################################*/
+ **     Filename    : os_tasks.c
+ **     Project     : labfinal
+ **     Processor   : MKL25Z128VLK4
+ **     Component   : Events
+ **     Version     : Driver 01.00
+ **     Compiler    : GNU C Compiler
+ **     Date/Time   : 2019-11-08, 15:45, # CodeGen: 74
+ **     Abstract    :
+ **         This is user's event module.
+ **         Put your event handler code here.
+ **     Settings    :
+ **     Contents    :
+ **         Task2_task - void Task2_task(os_task_param_t task_init_data);
+ **         Task1_task - void Task1_task(os_task_param_t task_init_data);
+ **
+ ** ###################################################################*/
 /*!
-** @file os_tasks.c
-** @version 01.00
-** @brief
-**         This is user's event module.
-**         Put your event handler code here.
-*/         
+ ** @file os_tasks.c
+ ** @version 01.00
+ ** @brief
+ **         This is user's event module.
+ **         Put your event handler code here.
+ */
 /*!
-**  @addtogroup os_tasks_module os_tasks module documentation
-**  @{
-*/         
+ **  @addtogroup os_tasks_module os_tasks module documentation
+ **  @{
+ */
 /* MODULE os_tasks */
 
 #include "Cpu.h"
@@ -42,6 +42,15 @@ extern "C" {
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
 extern SemaphoreHandle_t meuSemaforo;
+
+char menuComandos[] = "\r\n\
+Comandos\r\n\
+\r\n\
+1- Pausar o escalonador\r\n\
+2- Exibir o estado das tarefas\r\n\
+3- Resumir\r\n\
+\r\n\
+";
 
 /*
  ** ===================================================================
@@ -61,17 +70,32 @@ void Task1_task(os_task_param_t task_init_data)
 #endif
 		/* Write your code here ... */
 
+		//debug_printf("%s", mainMenu);
 
-		char mainMenu[] = "\
-	Main Menu\r\n\
-\r\n\
-1- OS Pause\r\n\
-2- OS Show task states\r\n\
-3- OS Resume\r\n\
-\r\n\
-";
+		int opcaodoSwitch = 1;
 
-		debug_printf("%s", mainMenu);
+
+		while (1){
+			switch(opcaodoSwitch){
+			case 1:{
+				debug_printf("%s", menuComandos);
+				opcaodoSwitch = 2;
+				OSA_TimeDelay(1000);
+				break;
+			}
+			case 2:{
+				debug_printf("Cheguei aqui. \r\n");
+				opcaodoSwitch = 1;
+				OSA_TimeDelay(1000);
+
+			}
+			case 3:
+				break;
+			}
+
+
+		}
+
 
 		OSA_TimeDelay(1000);
 
@@ -99,7 +123,13 @@ void Task2_task(os_task_param_t task_init_data)
 		/* Write your code here ... */
 
 
-		debug_printf("Imprimir Tarefa 2. \r\n");
+		//debug_printf("Imprimir Tarefa 2. \r\n");
+
+		ledrgb_setBlueLed();
+
+		OSA_TimeDelay(1000);
+
+		ledrgb_clearBlueLed();
 
 		OSA_TimeDelay(1000);
 
@@ -128,7 +158,7 @@ void Task3_task(os_task_param_t task_init_data)
 		/* Write your code here ... */
 
 
-		debug_printf("Imprimir Tarefa 3. \r\n");
+		//debug_printf("Imprimir Tarefa 3. \r\n");
 
 		OSA_TimeDelay(1000);
 
@@ -157,7 +187,7 @@ void Task4_task(os_task_param_t task_init_data)
 		/* Write your code here ... */
 
 
-		debug_printf("Imprimir Tarefa 4. \r\n");
+		//debug_printf("Imprimir Tarefa 4. \r\n");
 
 		OSA_TimeDelay(1000);
 
@@ -186,7 +216,7 @@ void Task5_task(os_task_param_t task_init_data)
 		/* Write your code here ... */
 
 
-		debug_printf("Imprimir Tarefa 5. \r\n");
+		//debug_printf("Imprimir Tarefa 5. \r\n");
 
 		OSA_TimeDelay(1000);
 

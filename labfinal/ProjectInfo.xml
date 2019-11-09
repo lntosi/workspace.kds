@@ -133,6 +133,7 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\src\tasks.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\src\timers.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\Events.c</PathName>
+      <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\ledrgb_hal.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\main.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\os_tasks.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\rtos_main_task.c</PathName>
@@ -204,6 +205,7 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\port\gcc\portTicks.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\port\gcc\portmacro.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\Events.h</PathName>
+      <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\ledrgb_hal.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\os_tasks.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\rtos_main_task.h</PathName>
     </GeneratedHs>
