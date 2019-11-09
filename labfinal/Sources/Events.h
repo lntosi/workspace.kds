@@ -42,6 +42,7 @@
 #include "Task4.h"
 #include "Task5.h"
 #include "DbgCs1.h"
+#include "gpio1.h"
 
 #ifdef __cplusplus
 extern "C" {

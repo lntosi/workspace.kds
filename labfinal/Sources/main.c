@@ -43,6 +43,7 @@
 #include "Task4.h"
 #include "Task5.h"
 #include "DbgCs1.h"
+#include "gpio1.h"
 #if CPU_INIT_CONFIG
   #include "Init_Config.h"
 #endif

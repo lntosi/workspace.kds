@@ -32,6 +32,7 @@
 #include "Events.h"
 #include "rtos_main_task.h"
 #include "os_tasks.h"
+#include "ledrgb_hal.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -60,13 +61,19 @@ void Task1_task(os_task_param_t task_init_data)
 #endif
 		/* Write your code here ... */
 
-		//ledrgb_setRedLed( );
-		//ledrgb_setBlueLed( );
 
-		debug_printf("Imprimir Tarefa 1. \r\n");
+		char mainMenu[] = "\
+	Main Menu\r\n\
+\r\n\
+1- OS Pause\r\n\
+2- OS Show task states\r\n\
+3- OS Resume\r\n\
+\r\n\
+";
+
+		debug_printf("%s", mainMenu);
 
 		OSA_TimeDelay(1000);
-
 
 #ifdef PEX_USE_RTOS   
 	}

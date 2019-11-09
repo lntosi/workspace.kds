@@ -1,4 +1,4 @@
-21:01:48 **** Incremental Build of configuration Debug for project labsem ****
+22:30:37 **** Incremental Build of configuration Debug for project labsem ****
 make all 
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "labsem.elf"
@@ -7,5 +7,5 @@ arm-none-eabi-size --format=berkeley "labsem.elf"
 Finished building: labsem.siz
  
 
-21:01:50 Build Finished (took 1s.168ms)
+22:30:38 Build Finished (took 1s.4ms)
 

@@ -1,4 +1,4 @@
-16:34:52 **** Incremental Build of configuration Debug for project testesemaf ****
+21:11:38 **** Incremental Build of configuration Debug for project testesemaf ****
 make all 
 Building file: ../Sources/rtos_main_task.c
 Invoking: Cross ARM C Compiler
@@ -13,9 +13,9 @@ Finished building target: testesemaf.elf
 Invoking: Cross ARM GNU Print Size
 arm-none-eabi-size --format=berkeley "testesemaf.elf"
    text	   data	    bss	    dec	    hex	filename
-  18092	    124	  10308	  28524	   6f6c	testesemaf.elf
+  17700	    124	  10308	  28132	   6de4	testesemaf.elf
 Finished building: testesemaf.siz
  
 
-16:34:55 Build Finished (took 3s.5ms)
+21:11:42 Build Finished (took 3s.944ms)
 

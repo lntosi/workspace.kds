@@ -39,7 +39,9 @@ Generated_Code/osa1.o: ../Generated_Code/osa1.c ../Generated_Code/osa1.h \
  C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_port_hal.h \
  C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_uart_hal.h \
  C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_lpsci_hal.h \
- C:/Users/lntos/workspace.kds/labfinal/SDK/platform/utilities/inc/fsl_debug_console.h
+ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/utilities/inc/fsl_debug_console.h \
+ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_gpio_hal.h \
+ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/drivers/inc/fsl_gpio_driver.h
 
 ../Generated_Code/osa1.h:
 
@@ -126,3 +128,7 @@ C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_uart_hal.h:
 C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_lpsci_hal.h:
 
 C:/Users/lntos/workspace.kds/labfinal/SDK/platform/utilities/inc/fsl_debug_console.h:
+
+C:/Users/lntos/workspace.kds/labfinal/SDK/platform/hal/inc/fsl_gpio_hal.h:
+
+C:/Users/lntos/workspace.kds/labfinal/SDK/platform/drivers/inc/fsl_gpio_driver.h:
