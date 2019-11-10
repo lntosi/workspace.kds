@@ -80,12 +80,26 @@ void Task1_task(os_task_param_t task_init_data)
 			case 1:{
 				debug_printf("%s", menuComandos);
 				opcaodoSwitch = 2;
-				OSA_TimeDelay(1000);
 				break;
 			}
 			case 2:{
-				debug_printf("Cheguei aqui. \r\n");
-				opcaodoSwitch = 1;
+
+				char escolhaComando = 0;
+
+				escolhaComando = debug_getchar();
+
+				if( escolhaComando == '1')
+					//opcaodoSwitch = SUSPENDING_OS;
+					debug_printf("Escolhi comando 1. \r\n");
+				else if( escolhaComando == '2')
+					//opcaodoSwitch = SHOW_TASK_STATES;
+					debug_printf("Escolhi comando 2. \r\n");
+				else if( escolhaComando == '3')
+					//opcaodoSwitch = RESUMMING_OS;
+					debug_printf("Escolhi comando 3. \r\n");
+				else
+					opcaodoSwitch = 1;
+
 				OSA_TimeDelay(1000);
 
 			}
@@ -97,7 +111,7 @@ void Task1_task(os_task_param_t task_init_data)
 		}
 
 
-		OSA_TimeDelay(1000);
+		//OSA_TimeDelay(1000);
 
 #ifdef PEX_USE_RTOS   
 	}
