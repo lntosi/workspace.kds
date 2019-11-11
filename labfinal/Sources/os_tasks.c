@@ -34,6 +34,8 @@
 #include "os_tasks.h"
 #include "ledrgb_hal.h"
 
+#include "task.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif 
@@ -90,28 +92,49 @@ void Task1_task(os_task_param_t task_init_data)
 
 				if( escolhaComando == '1')
 					//opcaodoSwitch = SUSPENDING_OS;
-					debug_printf("Escolhi comando 1. \r\n");
+					//debug_printf("Escolhi comando 1. \r\n");
+					opcaodoSwitch = 3;
 				else if( escolhaComando == '2')
 					//opcaodoSwitch = SHOW_TASK_STATES;
 					debug_printf("Escolhi comando 2. \r\n");
 				else if( escolhaComando == '3')
 					//opcaodoSwitch = RESUMMING_OS;
-					debug_printf("Escolhi comando 3. \r\n");
+					//debug_printf("Escolhi comando 3. \r\n");
+					opcaodoSwitch = 4;
 				else
 					opcaodoSwitch = 1;
 
 				OSA_TimeDelay(1000);
+				break;
 
 			}
-			case 3:
+			case 3:{
+				debug_printf("Escolhi comando 1 no CASE 3. \r\n");
+				vTaskSuspendAll();
+				//systemState = SYSTEM_SUSPENDED;
+				opcaodoSwitch = 1;
+				break;
+			}
+
+			case 4:{
+				debug_printf("Escolhi comando 3 no CASE 4. \r\n");
+				xTaskResumeAll();
+				//systemState = SYSTEM_SUSPENDED;
+				opcaodoSwitch = 1;
+				break;
+			}
+
+			case 5:{
+				debug_printf("Escolhi comando 2 no CASE 5. \r\n");
 				break;
 			}
 
 
+			}
+
 		}
 
-
-		//OSA_TimeDelay(1000);
+		OSA_TimeDelay(1000);
 
 #ifdef PEX_USE_RTOS   
 	}
@@ -150,7 +173,7 @@ void Task2_task(os_task_param_t task_init_data)
 
 #ifdef PEX_USE_RTOS   
 	}
-#endif    
+#endif
 }
 
 /*
@@ -176,10 +199,18 @@ void Task3_task(os_task_param_t task_init_data)
 
 		OSA_TimeDelay(1000);
 
+		ledrgb_setRedLed();
+
+		OSA_TimeDelay(1000);
+
+		ledrgb_clearRedLed();
+
+		//OSA_TimeDelay(1000);
+
 
 #ifdef PEX_USE_RTOS   
 	}
-#endif    
+#endif
 }
 
 /*
@@ -208,7 +239,7 @@ void Task4_task(os_task_param_t task_init_data)
 
 #ifdef PEX_USE_RTOS   
 	}
-#endif    
+#endif
 }
 
 /*
@@ -237,7 +268,7 @@ void Task5_task(os_task_param_t task_init_data)
 
 #ifdef PEX_USE_RTOS   
 	}
-#endif    
+#endif
 }
 
 /* END os_tasks */

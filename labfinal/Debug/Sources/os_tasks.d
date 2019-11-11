@@ -60,7 +60,8 @@ Sources/os_tasks.o: ../Sources/os_tasks.c \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/clockMan1.h \
  C:/Users/lntos/workspace.kds/labfinal/Generated_Code/gpio1.h \
  ../Sources/rtos_main_task.h ../Sources/os_tasks.h \
- ../Sources/ledrgb_hal.h
+ ../Sources/ledrgb_hal.h \
+ C:/Users/lntos/workspace.kds/labfinal/SDK/rtos/FreeRTOS/include/task.h
 
 C:/Users/lntos/workspace.kds/labfinal/Generated_Code/Cpu.h:
 
@@ -187,3 +188,5 @@ C:/Users/lntos/workspace.kds/labfinal/Generated_Code/gpio1.h:
 ../Sources/os_tasks.h:
 
 ../Sources/ledrgb_hal.h:
+
+C:/Users/lntos/workspace.kds/labfinal/SDK/rtos/FreeRTOS/include/task.h:
