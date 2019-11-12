@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Sources/Events.c \
+../Sources/Utility.c \
 ../Sources/ledrgb_hal.c \
 ../Sources/main.c \
 ../Sources/os_tasks.c \
@@ -12,6 +13,7 @@ C_SRCS += \
 
 OBJS += \
 ./Sources/Events.o \
+./Sources/Utility.o \
 ./Sources/ledrgb_hal.o \
 ./Sources/main.o \
 ./Sources/os_tasks.o \
@@ -19,6 +21,7 @@ OBJS += \
 
 C_DEPS += \
 ./Sources/Events.d \
+./Sources/Utility.d \
 ./Sources/ledrgb_hal.d \
 ./Sources/main.d \
 ./Sources/os_tasks.d \

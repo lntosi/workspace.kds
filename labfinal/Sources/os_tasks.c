@@ -33,7 +33,6 @@
 #include "rtos_main_task.h"
 #include "os_tasks.h"
 #include "ledrgb_hal.h"
-
 #include "task.h"
 
 #ifdef __cplusplus
@@ -42,6 +41,13 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+
+
+#define		TASK_STATUS_RUNNING										"running"
+#define		TASK_STATUS_READY										"ready"
+#define		TASK_STATUS_BLOCKED										"blocked"
+#define		TASK_STATUS_SUSPENDED									"suspended"
+#define		TASK_STATUS_DELETED										"deleted"
 
 extern SemaphoreHandle_t meuSemaforo;
 
@@ -53,6 +59,7 @@ Comandos\r\n\
 3- Resumir\r\n\
 \r\n\
 ";
+
 
 /*
  ** ===================================================================
@@ -72,69 +79,130 @@ void Task1_task(os_task_param_t task_init_data)
 #endif
 		/* Write your code here ... */
 
-		//debug_printf("%s", mainMenu);
-
 		int opcaodoSwitch = 1;
 
-
 		while (1){
+
 			switch(opcaodoSwitch){
+
 			case 1:{
 				debug_printf("%s", menuComandos);
 				opcaodoSwitch = 2;
 				break;
 			}
+
 			case 2:{
-
 				char escolhaComando = 0;
-
 				escolhaComando = debug_getchar();
-
 				if( escolhaComando == '1')
-					//opcaodoSwitch = SUSPENDING_OS;
 					//debug_printf("Escolhi comando 1. \r\n");
 					opcaodoSwitch = 3;
 				else if( escolhaComando == '2')
-					//opcaodoSwitch = SHOW_TASK_STATES;
-					debug_printf("Escolhi comando 2. \r\n");
+					//debug_printf("Escolhi comando 2. \r\n");
+					opcaodoSwitch = 5;
 				else if( escolhaComando == '3')
-					//opcaodoSwitch = RESUMMING_OS;
 					//debug_printf("Escolhi comando 3. \r\n");
 					opcaodoSwitch = 4;
 				else
 					opcaodoSwitch = 1;
-
 				OSA_TimeDelay(1000);
 				break;
-
 			}
+
 			case 3:{
-				debug_printf("Escolhi comando 1 no CASE 3. \r\n");
+				//debug_printf("Escolhi comando 1 no CASE 3. \r\n");
 				vTaskSuspendAll();
-				//systemState = SYSTEM_SUSPENDED;
 				opcaodoSwitch = 1;
 				break;
 			}
 
 			case 4:{
-				debug_printf("Escolhi comando 3 no CASE 4. \r\n");
+				//debug_printf("Escolhi comando 3 no CASE 4. \r\n");
 				xTaskResumeAll();
-				//systemState = SYSTEM_SUSPENDED;
 				opcaodoSwitch = 1;
 				break;
 			}
 
 			case 5:{
-				debug_printf("Escolhi comando 2 no CASE 5. \r\n");
-				break;
-			}
+				//debug_printf("Escolhi comando 2 no CASE 5. \r\n");
 
+				//Fonte: https://www.freertos.org/uxTaskGetSystemState.html
+				//       https://community.nxp.com/thread/358828
+
+				TaskStatus_t *pxTaskStatusArray;
+				volatile UBaseType_t uxArraySize, x;
+				unsigned long ulTotalRunTime;
+
+				uxArraySize = uxTaskGetNumberOfTasks();
+
+				pxTaskStatusArray = pvPortMalloc( uxArraySize * sizeof( TaskStatus_t ) );
+
+				if( pxTaskStatusArray != NULL )
+				{
+					/* Generate raw status information about each task. */
+					uxArraySize = uxTaskGetSystemState( pxTaskStatusArray,
+							uxArraySize,
+							&ulTotalRunTime );
+
+					/* For percentage calculations. */
+					ulTotalRunTime /= 100UL;
+
+					/* Avoid divide by zero errors. */
+					if( ulTotalRunTime > 0 )
+					{
+						//ebug_printf( "TASK NAME    ENTRY POINT    ID    PRIORITY     STATUS     TCOMP\n\r\n\r");
+						debug_printf( "TASK NAME            ID          PRIORITY         STATUS          TCOMP\n\r\n\r");
+						/* For each populated position in the pxTaskStatusArray array,
+									 format the raw data as human readable ASCII data. */
+						for( x = 0; x < uxArraySize; x++ )
+						{
+
+							char* taskStatus = 0;
+
+							switch(pxTaskStatusArray[ x ].eCurrentState) {
+							case eRunning:
+								taskStatus = TASK_STATUS_RUNNING;
+								break;
+							case eReady:
+								taskStatus = TASK_STATUS_READY;
+								break;
+							case eBlocked:
+								taskStatus = TASK_STATUS_BLOCKED;
+								break;
+							case eSuspended:
+								taskStatus = TASK_STATUS_SUSPENDED;
+								break;
+							case eDeleted:
+								taskStatus = TASK_STATUS_DELETED;
+								break;
+							}
+
+							//debug_printf( "%s  %s  %d  %d  %s  %d\n\r",
+							//debug_printf( "TASK NAME            ID          PRIORITY         STATUS          TCOMP\n\r\n\r");
+							debug_printf( "%s                  %d          %d               %s             %d\n\r",
+									pxTaskStatusArray[ x ].pcTaskName,
+									//entryPoint,
+									pxTaskStatusArray[ x ].xTaskNumber,
+									pxTaskStatusArray[ x ].uxCurrentPriority,
+									taskStatus,
+									pxTaskStatusArray[ x ].ulRunTimeCounter );
+
+						}
+
+					}
+
+					vPortFree( pxTaskStatusArray );
+					debug_printf("\n\rPress any key to continue...\n\r");
+					opcaodoSwitch = 1;
+				}
+
+			}
 
 			}
 
 		}
 
-		OSA_TimeDelay(1000);
+
 
 #ifdef PEX_USE_RTOS   
 	}
@@ -204,8 +272,6 @@ void Task3_task(os_task_param_t task_init_data)
 		OSA_TimeDelay(1000);
 
 		ledrgb_clearRedLed();
-
-		//OSA_TimeDelay(1000);
 
 
 #ifdef PEX_USE_RTOS   

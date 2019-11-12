@@ -1,0 +1,11 @@
+10:15:11 **** Incremental Build of configuration Debug for project lab05_escalonador_fixo ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "lab05_escalonador_fixo.elf"
+   text	   data	    bss	    dec	    hex	filename
+  24348	    132	  10348	  34828	   880c	lab05_escalonador_fixo.elf
+Finished building: lab05_escalonador_fixo.siz
+ 
+
+10:15:12 Build Finished (took 1s.282ms)
+

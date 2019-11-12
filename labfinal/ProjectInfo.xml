@@ -133,6 +133,7 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\src\tasks.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\src\timers.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\Events.c</PathName>
+      <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\Utility.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\ledrgb_hal.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\main.c</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\Sources\os_tasks.c</PathName>
@@ -190,7 +191,9 @@
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\utilities\inc\fsl_misc_utilities.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\platform\utilities\src\print_scan.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\FreeRTOS.h</PathName>
+      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\PE_KSDK_Types.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\StackMacros.h</PathName>
+      <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\Utility.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\croutine.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\deprecated_definitions.h</PathName>
       <PathName>C:\Users\lntos\workspace.kds\labfinal\SDK\rtos\FreeRTOS\include\event_groups.h</PathName>
